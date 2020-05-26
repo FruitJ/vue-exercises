@@ -1,2 +1,25 @@
-# vue-s-exercises
-This is a small exercise for the beginner vue project, updated daily.
+# Vue exercises demo
+---
+![Vue](https://cn.vuejs.org/images/logo.png)
+## 一、详情 :
+该仓库收录平时搜集而来的有关 Vue 练手的项目, 如果您是大神那么请绕路。如果您是萌新, 那不妨拿几个 demo 来练练手, 还记得那句古话吗 ? 
+> 书读百遍，其义自见。 --- `自晋·陈寿《三国志·魏志·董遇传》`
+
+您会收获到 :
+💑: 爱情
+👍 : 鼓励
+💡 : 知识
+
+还等什么 ? 拿起您的键盘带上您的鼠标, 赶快搞起来吧 !!! 
+
+## 二、目录 :
+### 初级 :
+#### 1. vue - todo List
+#### 2. vue - 收货地址选择
+#### 3. vue - 表单信息动态添加修改
+#### 4. vue - 三级联动
+#### 5. vue - 京东购物车
+
+### 中级 :
+loading ...
+
