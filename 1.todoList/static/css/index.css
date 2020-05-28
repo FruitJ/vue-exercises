@@ -1,0 +1,18 @@
+.container {
+    margin-top: 50px;
+}
+
+.container table {
+    table-layout:fixed;
+}
+
+table .overflow {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}   
+
+table td {
+    vertical-align: middle !important;
+}

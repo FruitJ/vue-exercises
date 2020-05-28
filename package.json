@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "vue": "^2.6.11"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "3",
+    "jquery": "^3.5.1",
+    "multiparty": "^4.2.1",
+    "uuid": "^8.1.0",
+    "xml2js": "^0.4.23"
+  }
+}

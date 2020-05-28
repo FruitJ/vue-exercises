@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <link rel="shortcut icon" href="https://cn.vuejs.org/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <div class="row">
+            <h3 v-show="flag">{{ this.text }}</h3>
+            <div class="content" class="col-md-12">
+                <button class="btn btn-default" @click="get">get 传参 - 后台获取</button>
+                <button class="btn btn-default" @click="post2form">post 传参【form 表单格式】 - 后台获取</button>
+                <button class="btn btn-default" @click="post2json">post 传参【json 格式】 - 后台获取</button>
+                <button class="btn btn-default" @click="post2xml">post 传参【xml 格式】 - 后台获取</button>
+                <button type="submit" class="btn btn-default" form="form" v-on="{mouseenter: show, mouseleave: hidden}">post 传参【stream 格式】 - 后台获取</button>
+            </div>
+            <div class="form col-md-12">
+                <div class="content col-md-12">
+                    <form class="form-inline" id="form" @submit.prevent="post2stream">
+                        <div class="form-group">
+                          <label for="exampleInputName2">userName</label>
+                          <input type="text" name="userName" class="form-control" id="exampleInputName2" placeholder="用户名">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail2">userPwd</label>
+                          <input type="password" name="userPwd" class="form-control" id="exampleInputEmail2" placeholder="密码">
+                        </div>
+                        <div class="form-group">
+                            <input type="file" name="file-1" placeholder="media 文件一">
+                        </div>
+                        <div class="form-group">
+                            <input type="file" name="file-2" placeholder="media 文件二">
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/axios.min.js"></script>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            methods: {
+                get() {
+                    axios.get("http://localhost:3000/testGetController", {
+                        params: {
+                            name: "FruitJ",
+                            age: 22,
+                        },
+                    }).then((res) => {
+                        console.log(res.data);
+                    }).catch((err) => {
+                        console.log(err);
+                    });
+                },
+                post2form() {
+                    axios.post("http://localhost:3000/testPOSTController", {
+                        name: "FruitJ",
+                        age: 22,
+                    }, {
+                        headers: {
+                            'content-type': 'application/x-www-form-urlencoded',
+                        },
+                    }).then((res) => {
+                        console.log(res.data);
+                    }).catch((err) => {
+                        console.log(err);
+                    });
+                },
+                post2json() {
+                    axios.post("http://localhost:3000/testPOSTController", {
+                        name: "FruitJ",
+                        age: 22,
+                    }, {
+                        headers: {
+                            'content-type': 'application/json',
+                        },
+                    }).then((res) => {
+                        console.log(res.data);
+                    }).catch((err) => {
+                        console.log(err);
+                    });
+                },
+                post2xml() {
+                    axios.post("http://localhost:3000/testPOSTController", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+            <root>
+                <name>FruitJ</name>
+                <age>22</age>
+            </root>`, {
+                        headers: {
+                            'content-type': 'text/xml',
+                        },
+                    }).then((res) => {
+                        console.log(res.data);
+                    }).catch((err) => {
+                        console.log(err);
+                    });
+                },
+                post2stream(ev) {
+                    console.log(ev.target);
+                    
+                    axios.post("http://localhost:3000/testPOSTController", new FormData(ev.target)).then((res) => {
+                        console.log(res.data);
+                    }).catch((err) => {
+                        console.log(err);
+                    });
+                },
+                show() {
+                    this.flag = true;
+                },
+                hidden() {
+                    this.flag = false;
+                },
+            },
+            data: {
+                text: '请填写下方表单后再点击提交',
+                flag: false,
+            }
+        });
+    </script>
+</body>
+
+</html>

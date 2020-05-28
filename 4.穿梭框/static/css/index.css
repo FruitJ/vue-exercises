@@ -1,0 +1,41 @@
+.container {
+    position: relative;
+}
+.default {
+    margin-top: 50px;
+}
+.col-md-3 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.panel-heading span {
+    position: relative;
+    top: -2px;
+    left: 6px;
+}
+.panel-body {
+
+    height: 252px;
+}
+.btnArea {
+    position: absolute;
+    top: 50px;
+}
+.btnArea {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -28px;
+    margin-left: -31.75px;
+}
+.showNum {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    display: inline-block;
+
+}
+.btn {
+    margin-top: 10px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <link rel="shortcut icon" href="https://cn.vuejs.org/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <div class="content">
+            <button class="btn btn-success btn-lg-3">全部商品 {{ shopsAllNum }} 件</button>
+        <table class="table table-bordered" style="text-align: center;">
+            <thead>
+                <tr>
+                    <td class="format">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" v-model="isSelectAll" @change="checkedAll"> 全选
+                          </label>
+                        
+                    </td>
+                    <td>商品图片</td>
+                    <td>商品名称</td>
+                    <td>单价</td>
+                    <td>数量</td>
+                    <td>小计</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+            <tbody>
+                <template v-for="(item,index) in list">
+                    <tr>
+                        <td>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" v-model="selectArr[index]" @change="selectedAll(index)">{{ item.name }}
+                              </label>
+                        </td>
+                        <td colspan="6"></td>
+                    </tr>
+                    <tr v-for="(option,num) in item.shops">
+                        <td class="format">
+                            <input type="checkbox" :value="option.id" v-model="option.isSelected" @change="selectedOnly(index)">
+                        </td>
+                        
+                        <td>
+                            <img :src="option.picUrl" alt="">
+                        </td>
+                        <td>
+                            {{ option.shopName }}
+                        </td>
+                        <td>
+                            {{ option.price | toFixed }}
+                        </td>
+                        <td>
+                            <input type="number" min="0" v-model.number="option.num">
+                        </td>
+                        <td>
+                            {{ option.price * option.num | toFixed }}
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" @click="removeItem(index, option.id)">移除</button>
+                        </td>
+                    </tr>
+                </template>
+                <tr>
+                    <td colspan="2">已选择</td>
+                    <td>{{ selectedNum }} 件商品</td>
+                    <td colspan="3">总价</td>
+                    <td>{{ totalPrice | toFixed }}</td>
+                </tr>
+                <tr>
+                    <td colspan="6"></td>
+                    <td>
+                        <button class="btn btn-danger" @click="clear">清空购物车</button>
+                    </td>
+                </tr>
+            </tbody>
+            
+        </table>
+        </div> 
+    </div>
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="../static/js/index.js"></script>
+</body>
+
+</html>

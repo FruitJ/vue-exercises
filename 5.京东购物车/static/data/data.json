@@ -1,0 +1,32 @@
+[{
+    "name": "阔步专营店",
+    "isChecked": false,
+    "id": 10,
+    "shops": [{
+        "picUrl": "../static/images/国学.jpg",
+        "shopName": "书五经易经史记资治通鉴唐诗三百首孙子兵法山海经道德经",
+        "price": 299,
+        "num": 1,
+        "isSelected": false,
+        "id": 11
+    }]
+}, {
+    "name": "优和数码专营店",
+    "isChecked": true,
+    "id": 20,
+    "shops": [{
+        "picUrl": "../static/images/键盘T11.jpg",
+        "shopName": "K11机械手感键盘 T11游戏键盘鼠标套装 台式机笔记本电脑有线七彩发光背光键鼠套装 力镁K11白色 单键盘",
+        "price": 18.8,
+        "num": 1,
+        "isSelected": true,
+        "id": 21
+    }, {
+        "picUrl": "../static/images/键盘T13.jpg",
+        "shopName": "K13有线键盘 T13键盘鼠标套装 家用办公商务游戏USB键鼠套装 力镁K13 单键盘",
+        "price": 13.9,
+        "num": 2,
+        "isSelected": true,
+        "id": 22
+    }]
+}]

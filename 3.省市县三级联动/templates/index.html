@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 发送 ajax 请求所以需要【起服务】(live server 即可/node 服务) -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <div class="row">
+            <div class="content">
+                <div class="col-md-4">
+                    <select class="form-control" v-model="defaultProvinceVal" v-on="{mousedown: getProvinceData,change:selectProvince}">
+                        <option selected style="display: none;">省份</option>
+                        <option v-for="(item,index) in province">{{ item }}</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-control" v-model="defaultCityVal" @change="selectCity">
+                        <option selected style="display: none;">城市</option>
+                        <option v-for="(item,index) in city">{{ item }}</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-control" v-model="defaultCountiesVal">
+                        <option selected style="display: none;">县区</option>
+                        <option v-for="(item,index) in counties">{{ item }}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="../../node_modules/axios/dist/axios.min.js"></script>
+    <script src="../static/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.content {
+    position: relative;
+    margin-top: 50px;
+}
+h3 {
+    position: absolute;
+    right: 83px;
+    top: -6px;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <div class="row">
+            <div class="content col-md-3 col-md-offset-5">
+                <label class="checkbox-inline">
+                    <input type="checkbox" v-model="isAll" @change="selectAll"> 全选
+                </label><br>
+                <label class="checkbox-inline" v-for="(item,index) in temp">
+                    <input type="checkbox" :value="item" v-model="fruits" @change="selectOnly"> {{ item }}
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="../../node_modules/vue/dist/vue.min.js"></script>
+    <script src="../static/js/index.js"></script>
+</body>
+
+</html>
