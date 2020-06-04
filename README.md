@@ -16,7 +16,7 @@
 还等什么 ? 拿起您的键盘带上您的鼠标, 赶快搞起来吧 !!! 
 
 ## 二、状态 :
-![](https://img.shields.io/badge/version-1.0.0-brightgreen)
+![](https://img.shields.io/badge/version-1.0.1-%2340BA12)
 ![](https://img.shields.io/badge/downloads-0k%2Fday-%234cc61e)
 ![](https://img.shields.io/badge/dependencies-inaccessible-green)
 ![](https://img.shields.io/badge/npm-pending-blue)
@@ -58,10 +58,23 @@
 在不使用框架的前提下打通 node 后台获取前台页面参数的各个环节, 包括普通的 GET 请求、POST 请求的四种常见内容类型的请求方式【包括文件上传】, 文件上传可以自己手动解析, 思路就是将每个数据段剥离开来, 再判断是文本域还是媒体域, 媒体域则直接写入文件, 文本域则直接转成需要的值即可, 本案例采用的是 `multiparty` 这个库来完成的上传, 虽然文件上传可以手动解析但并不推荐, 因为效率太低 ...<br>
 难度: [★]
 
-**`2020年 05月 29日预更新【今天】`**
+**`预计2020年 06月 --日预更新案例 7 【--】`**
 #### 7. vue - node 小爬虫
 
 未完待续 ...
 ### 中级(组件篇) :
-loading ...
+#### [1. 知乎首页搜索框](https://github.com/FruitJ/vue-exercises/tree/master/7.%E7%9F%A5%E4%B9%8E%E9%A6%96%E9%A1%B5%E6%90%9C%E7%B4%A2%E6%A1%86)
+**效果 :**
+![101.gif](https://upload-images.jianshu.io/upload_images/16761151-c06eb4098d8bed3e.gif?imageMogr2/auto-orient/strip)
 
+- 本案例使用 vue 组件来进行开发的, 是将整个搜索模块分为搜索框组件和展示面吧组件, 展示面板有拆出来两个大组件, 一个是静态展示时用的组件 A 和搜索时展示用的组件 B, 组件 A 又拆出来两个独立的组件一个是热搜组件另一个是搜索历史组件。这个案例组件划分的颗粒度还是蛮细的。<br>
+- 还有就是在做搜索功能的时候使用的是百度搜索的接口, 通过自己封装的 jsonp 跨域请求, 来实时响应用户输入内容, 以此来达到真是的实时输入与模糊匹配。
+
+难度: [★]
+#### [2. 苏宁易购商品筛选(简易版)](https://github.com/FruitJ/vue-exercises/tree/master/8.%E8%8B%8F%E5%AE%81%E6%98%93%E8%B4%AD%E5%95%86%E5%93%81%E7%AD%9B%E9%80%89(%E7%AE%80%E5%8D%95%E7%89%88))
+**效果 :**
+![101.gif](https://upload-images.jianshu.io/upload_images/16761151-521b0b8c117d8154.gif?imageMogr2/auto-orient/strip)
+
+- 本案例没有难度, 主要是为了练习组件方面的知识, 只是涉及到了简单的筛选, 结果发现自己的 css 是真的不好 ...
+
+难度: [无]
