@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1591197361734'); /* IE9 */
+  src: url('iconfont.eot?t=1591197361734#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOoAAsAAAAAB9gAAANaAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDFIJqATYCJAMQCwoABCAFhG0HRhvaBlGUDkqM7Ick6QEjbYTAqLIwQaACBSgAAIUCGAjEw9ca+v7uv8tmrwQqUQVSqADHlxWDroytKtsqW+M7Pqir78gu5y6wX04qSxXoUuiEvcB9iopbcw5B2AhTlFUjUuh/33zL6aUZ+TyX05virW9nOa5haww86gUYBxTQ3tgWjQqkBLlh7CbKgzhOoFtGgd3YXe6NgQTGBeJDEqnGIBWQUks3YSxZmuKbQStfyim+8s/HltPRKIYKTL35ahs2FqvkNVJdmVc8oAT5eDZoq6g4BSTxptTxTDtMnCKkO7/pOA80TWGVvBq+RppnUbEXXYN/eRShEiNQug2clZKVVTLmKKyGcwRrpBIVXsjohkV81jBrXGK163GjSGH1BHe2j/Ir8Jb1LfIpwmoWumTrHJA0ZfX8JNO2GCJSWKwU9LfSIjL+UrhkqEyGZcdsIl2CsEPbSfZeBYzrj90qd18Eza8vjd86EwRbmG+ICLWeW+u5MW0ocAPpTiR39b+9U+nZXR4ZOdh1G3B3NzupuBicgdRA18IJxWJFJKdI+2TrgLhLgDV5zwKRUEAVqkFV/qRF0v+CTFW9BoxzHahOFMzHO8Wf6iMcJqTwR8Pv09tDL1jBYEjOO+AbLKwieMGqhQUhGvZQ4o+7aIbLKzhZBEs/FEzYTsU6zczxZM8wmll77OdaysnGy63l1S7XdGEids+03TCupAayAZwkdBtHzkC938a8VyPaN37cd3z6fbJ7PL/wv0kl+Pf7ts59815CO33j7ctby3+TvGVDukpgzLRVWOYF0w3/YVJB1zELnj1exzDsb11KaPbHKBYsoWoOkcmewmByFqPmMrqTnFZP9srVFrmIExoEhF1WUezwF9UuZ2SyLxgc8IXRrqjo7sfeLSdH4u3oOqMSDOH1h0RTaZBZRkH5FaN3rjip5IIncp2EwaMxsuk9lshjzKg/kS9iwDAVsBNOwzwnqJhS1GLHIlXg0BPLnmRrKhoj1zGkCBQCsf5ACo2UDG0tRrn3X6HIW07hGl5H+gmxWtI5YKJhtCD3urIV71rOyfMR8eUTBkjESAE4CjaUwwQB2eWDUkgTtuQesUqALjVLbKuz5zcUT7gNOvCYjBI1MgbDS2biwQeVJkJlNHyVMFqaqn+jAQAA') format('woff2'),
+  url('iconfont.woff?t=1591197361734') format('woff'),
+  url('iconfont.ttf?t=1591197361734') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1591197361734#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-error:before {
+  content: "\e65c";
+}
+
+.icon-lajitong:before {
+  content: "\e62b";
+}
+
+.icon-fire-copy:before {
+  content: "\e72a";
+}
+

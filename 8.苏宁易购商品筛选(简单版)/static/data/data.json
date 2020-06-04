@@ -1,0 +1,124 @@
+{
+    "list": [{
+            "id": 1,
+            "pic": "../static/images/v1.jpg",
+            "price": 6089,
+            "name": "惠普（HP）光影精灵5代【i5-9300H 16GB 1T+256G SSD GTX1050 4G独显】15-dk0128TX 15.6英寸发烧游戏本大屏吃鸡电竞",
+            "evaluate": 0,
+            "salesVolume": 100,
+            "shop": "惠普嘉合永兴专卖店",
+            "system": "Windows 10",
+            "memory": "32GB"
+        },
+        {
+            "id": 2,
+            "pic": "../static/images/v2.jpg",
+            "price": 3044,
+            "name": "惠普（hp）星系列 星14-ce3090TX 14.0英寸轻薄本电脑 i7-1065G7 16GB内存 1TB SSD 固态 MX330-2G独显 银色 商务办公 轻薄便携",
+            "evaluate": 300,
+            "salesVolume": 250,
+            "shop": "惠普辉煌电脑专卖店",
+            "system": "Windows 7",
+            "memory": "16GB"
+        },
+        {
+            "id": 3,
+            "pic": "../static/images/v3.jpg",
+            "price": 10000,
+            "name": "戴尔（DELL）游匣G5 5590-2545B（i5-9300H 8G 1TB+128GB GTX1650-4G独显）标配 15.6英寸学生轻薄本办公本发烧专业游戏本",
+            "evaluate": 1,
+            "salesVolume": 99,
+            "shop": "烨犇电脑专营店",
+            "system": "Windows 10",
+            "memory": "16GB"
+        },
+        {
+            "id": 4,
+            "pic": "../static/images/v4.jpg",
+            "price": 7899,
+            "name": "联想(Lenovo)小新14性能版 2019款 14.0英寸便携轻薄本电脑i7-8565U 8GB 1TB+256GB双硬盘 MX230 2G独显 娱乐办公 小新潮升级款",
+            "evaluate": 0,
+            "salesVolume": 560,
+            "shop": "联想华夏电脑专卖店",
+            "system": "Windows 7",
+            "memory": "32GB"
+        },
+        {
+            "id": 5,
+            "pic": "../static/images/v5.jpg",
+            "price": 3299,
+            "name": "戴尔（DELL）燃5000灵越5593 15.6英寸10代酷睿窄边框轻薄家用商用办公学生设计游戏电脑（i7-1065G7 16G 1TB固态 MX230 4G独显 银色）定制",
+            "evaluate": 302,
+            "salesVolume": 430,
+            "shop": "戴尔智宸专卖店",
+            "system": "Linux",
+            "memory": "32GB"
+        },
+        {
+            "id": 6,
+            "pic": "../static/images/v6.jpg",
+            "price": 8888,
+            "name": "华硕(ASUS) 飞行堡垒7 FX95DD3750 15.6英寸大屏天选游戏本电脑 (锐龙R7-3750H 32G 1TB固态 GTX1050 3G独显 120Hz) 定制",
+            "evaluate": 70,
+            "salesVolume": 320,
+            "shop": "华硕腾硕专卖店",
+            "system": "Linux",
+            "memory": "16GB"
+        },
+        {
+            "id": 7,
+            "pic": "../static/images/v7.jpg",
+            "price": 9999,
+            "name": "惠普（hp）光影精灵5代 15.6英寸游戏电脑 i5-9300H 16G 256GB+1TB GTX1650 4G独显 IPS 白色背光 创意设计学生 发烧电竞吃鸡游戏本",
+            "evaluate": 560,
+            "salesVolume": 15000,
+            "shop": "惠普辉煌电脑专卖店",
+            "system": "Linux",
+            "memory": "32GB"
+        },
+        {
+            "id": 8,
+            "pic": "../static/images/v8.jpg",
+            "price": 7332,
+            "name": "惠普（HP）战66 三代 8TW70PC 15.6英寸商务轻薄电脑定制版本（i5-10210U 32G 1TB+256GB固态 MX250 2G 一年上门+意外 3年保修）",
+            "evaluate": 4,
+            "salesVolume": 156,
+            "shop": "智诚鑫业电脑专营店",
+            "system": "Windows 10",
+            "memory": "32GB"
+        },
+        {
+            "id": 9,
+            "pic": "../static/images/v9.jpg",
+            "price": 4973,
+            "name": "联想（Lenovo）拯救者Y7000 2020款 i5-10300H 8GB 1TB+512GB GTX16GBGB50 4GB独显 100%高色域 15.6英寸游戏本电竞吃鸡",
+            "evaluate": 1900,
+            "salesVolume": 2564,
+            "shop": "联想坚盾专卖店",
+            "system": "Windows 7",
+            "memory": "16GB"
+        },
+        {
+            "id": 10,
+            "pic": "../static/images/v10.jpg",
+            "price": 5555,
+            "name": "联想（Lenovo ) 小新Air14 2020新款 14.0英寸 轻薄商务办公电脑（i5-1035G1 16G 512GB固态 MX350 2G独显）指纹识别 银定制 预定",
+            "evaluate": 700,
+            "salesVolume": 864,
+            "shop": "京兴隆电脑旗舰店",
+            "system": "Windows 10",
+            "memory": "16GB"
+        }
+    ],
+    "option": [{
+        "id": 1,
+        "name": "操作系统",
+        "alias": "system",
+        "child": ["Windows 10", "Windows 7", "Linux"]
+    },{
+        "id": 2,
+        "name": "内存容量",
+        "alias": "memory",
+        "child": ["32GB", "16GB"]
+    }]
+}

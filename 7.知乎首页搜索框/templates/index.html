@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <link rel="shortcut icon" href="https://cn.vuejs.org/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/iconfont.css">
+</head>
+
+<body>
+    <!-- 根组件模板 -->
+    <div id="app" class="container global" @click="fn">
+        <!-- 知乎搜索框组件 -->
+        <zhihu-search-component :hotList="hotList" v-on="{submit, }"></zhihu-search-component>
+    </div>
+
+    <!-- 知乎搜索框组件模板 -->
+    <template id="zhihuSearchTemplate">
+        <div class="row">
+            <div class="col-md-5 col-md-offset-4 default">
+                <!-- 搜索框组件 -->
+                <search-component @submit="submit"></search-component>
+                <!-- 内容呈现组件 -->
+                <board-component :hotList="hotlist"></board-component>
+            </div>
+        </div>
+    </template>
+
+    <!-- 搜索框模板 -->
+    <template id="searchTemplate">
+        <form class="form-inline" @submit="submit">
+            <!-- <div class="form-inline"> -->
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="西南石油大学" v-on="{ focus, input }" :value="value">
+            </div>
+            <button type="submit" class="btn btn-info" @click="search">提问</button>
+            <!-- </div> -->
+        </form>
+    </template>
+
+    <!-- 内容呈现模板 -->
+    <template id="boardTemplate">
+        <div class="board" :style="{ display: isShow }">
+            <div class="content" :style="{display: isboardShow}">
+                <!-- 热词搜索组件 -->
+                <board-hot-component :hotList="hotlist"></board-hot-component>
+                <!-- 历史搜索组件 -->
+                <board-history-component></board-history-component>
+            </div>
+            <div class="content" :style="{display: isboardShow == 'block'? 'none': 'block'}">
+                <board-search-component></board-search-component>
+            </div>
+        </div>
+    </template>
+
+    <!-- 热词搜索模板 -->
+    <template id="boardHotTemplate">
+        <div class="hot-search">
+            <div class="SearchBar-label">
+                知乎热搜
+            </div>
+            <div class="menu-item" v-for="(item,index) in hotlist" :key="item.id" @click="toPage(item.id)">
+                {{ item.content }}
+                <i class="icon iconfont fire" :style="{opacity: item.level < 7 ? 1 : 0 }">&#xe72a;</i>
+            </div>
+        </div>
+    </template>
+
+    <!-- 历史搜索模板 -->
+    <template id="boardHistoryTemplate">
+        <div class="history-search">
+            <div class="SearchBar-label" :style="{display: isHistoryAreaShow}">
+                搜索历史
+                <div class="action" @click="removeAll">
+                    <i class="icon iconfont">&#xe62b;</i>
+                    <span>清空</span>
+                </div>
+            </div>
+            <div class="menu-item history" v-for="(item,index) in historyResult" :key="item.id">
+                {{ item.content }}
+                <i class="icon iconfont error" @click="remove(item.id)">&#xe65c;</i>
+            </div>
+        </div>
+    </template>
+
+    <template id="boardsearchTemplate">
+        <div>
+            <div class="menu-item" v-for="(item,index) in searchResult" :key="item.id" @click="toPage(item.id)">
+                {{ item.content }}
+            </div>
+        </div>
+    </template>
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="../../node_modules/vuex/dist/vuex.js"></script>
+    <script src="../../utils/request.js"></script>
+    <script src="../static/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+html,body {
+    width: 100%;
+    height: 100%;    
+    user-select: none;  
+}
+
+.global {
+    width: 100%;
+    height: 100%;
+}
+.default {
+    margin-top: 50px;
+    width: 430px !important;
+}
+.form-control {
+    width: 326px !important;
+    height: 34px !important;
+}
+.btn {
+    width: 70px;
+    height: 34px;
+}
+.board {
+    /* display: none; */
+    margin-top: 5px;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(26,26,26,.1);
+    width: 400px;
+    height: auto;
+}
+
+.board .content {
+    padding: 6px 0 8px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.SearchBar-label {
+    position: relative;
+    padding: 7px 0;
+    margin-right: 16px;
+    margin-left: 16px;
+    font-size: 14px;
+    color: #8590a6;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.menu-item {
+    position: relative;
+    padding: 0 16px;
+    display: block;
+    width: 100%;
+    height: 36px; 
+    font-size: 15px;
+    text-align: left;
+    line-height: 36px;
+    cursor: pointer;
+}
+.menu-item:hover {
+    background-color: #F6F6F6;
+}
+
+.menu-item i {
+    /* display: none;
+    position: absolute;
+    right: 0; */
+}
+.action {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.fire {
+    color: #F04F42;
+}
+.error {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 13px;
+}
+.history:hover .error {
+    display: block;
+}
+
+.menu-item .show {
+    display: block;
+}

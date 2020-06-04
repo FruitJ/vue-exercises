@@ -1,0 +1,311 @@
+.header {
+    margin-top: 50px;
+    margin-left: -10px;
+    width: 1190px;
+    /* background-color: green; */
+}
+
+.option {
+    width: 100%;
+    height: 40px;
+}
+
+.s-left {
+    float: left;
+    overflow: hidden;
+    width: 85px;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* background-color: blue; */
+}
+
+.s-left label {
+    padding-left: 10px;
+    line-height: 40px;
+    color: #999;
+    font-size: 12px;
+}
+
+.s-right {
+    /* overflow: hidden; */
+    float: left;
+    position: relative;
+    padding: 0 70px 0 20px;
+    width: 1080px;
+    height: 32px;
+    /* background-color: purple; */
+    /* background-color: #FFF; */
+    color: #333;
+}
+
+.other-opts {
+    float: left;
+    z-index: 50;
+    margin-left: -20px;
+    margin-right: 20px;
+    height: 32px;
+}
+
+.o-text {
+    display: block;
+    position: relative;
+    top: -1px;
+    z-index: 42;
+    padding: 0 29px 0 19px;
+    border: 1px solid transparent;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+}
+.o-text:hover {
+    /* top: 1px; */
+    z-index: 60;
+    color: #F60;
+    border-color: #F60;
+    border-bottom-color: #FFF;
+}
+
+.o-text:hover i{
+    background: url("../images/sprirt.png") no-repeat -100px -279px;
+    transform: rotate(-180deg);
+}
+
+.o-text:hover .o-details {
+    display: block;
+    border-top: 1px solid transparent;
+}
+
+.o-text span.o-text-span {
+    overflow-x: hidden;
+    display: inline-block;
+    padding: 5px 0;
+    text-decoration: none;
+    max-width: 108px;
+    line-height: 32px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.o-text i {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 9px;
+    height: 5px;
+    margin-top: -1px;
+    background: url("../images/sprirt.png") no-repeat -138px -279px;
+    transition: transform .4s cubic-bezier(0,0.39,0,0.98),-webkit-transform .4s cubic-bezier(0,0.39,0,0.98);
+    transform: rotate(0deg);
+}
+.o-details {
+    display: none;
+    border: 1px solid #F60;
+    position: absolute;
+    padding: 7px 18px 10px;
+    top: 38px;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: #fff;
+}
+.d-container {
+    padding: 0 50px 0 0;
+    zoom: 1;
+    font-size: 12px;
+    color: #333;
+}
+
+.d-container span {
+    float: left;
+    margin-right: 20px;
+    color: #666;
+    cursor: pointer;
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    zoom: 1;
+    font-size: 12px;
+}
+.d-container span:hover {
+    color: #F60;
+}
+.second-up {
+    display: block;
+    width: 100%;
+    height: 38px;
+    color: #333;
+    background: #F8F8FA;
+}
+
+.second-up .sort {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0 5px 0 0;
+    /* color: rgb(233, 181, 181); */
+}
+.second-up .sort span {
+    position: relative;
+    z-index: 40;
+    float: left;
+    cursor: pointer;
+    height: 38px;
+    line-height: 16px;
+    padding: 11px 0;
+}
+
+.second-up .sort span:hover {
+    color: #F60; 
+}
+
+.second-up .sort span.icon-com:hover i {
+    background-position: -239px -257px;
+}
+
+.second-up .sort span em {
+    padding: 0 20px;
+    font-style: normal;
+    cursor: pointer;
+    line-height: 16px;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 2px;
+    cursor: pointer;
+    line-height: 16px;
+    height: 9px;
+    width: 9px;
+}
+.second-up .sort span .icon1 {
+
+    background: url("../images/sprirt.png") no-repeat -220px -257px;
+
+}
+.second-up .sort span .icon2 {
+    background: url("../images/sprirt.png") no-repeat -50px -381px;
+}
+
+.my-main {
+    width: 1190px;
+    /* min-height: 500px; */
+    margin: 0 auto;
+    margin-left: -10px;
+    
+}
+
+.my-main ul {
+    margin: 0;
+    width: 1228px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    list-style: none;
+}
+
+.my-main ul li {
+    height: 365px;
+    position: relative;
+    border: 1px solid transparent;
+    left: -40px;
+    float: left;
+    width: 220px;
+    margin: 0 22px 30px 0;
+    list-style: none;
+    background-color: #FFF;
+    /* background-color: rgba(0,0,0,.2); */
+}
+.my-main ul li:hover {
+    box-shadow: 0 0 4px 1px rgba(210,210,214,0.50);
+    border: 1px solid #DDD;
+    /* padding: 29px 9px 9px 9px; */
+    border-radius: 2px;
+} 
+.my-main ul li:nth-child(5n) {
+    margin-right: 0;
+}
+.my-main ul li .product-box {
+    padding: 0 5px;
+    width: 220px;
+    height: 100%;
+}
+
+.my-main ul li .product-box .res-img {
+    position: relative;
+    left: -1px;
+    height: 210px;
+    width: 210px;
+    overflow: hidden;
+}
+
+.my-main ul li .product-box .res-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.res-info {
+
+}
+
+.price-box {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    margin: 12px 0 0 0;
+    overflow: hidden;
+}
+.price-box span {
+    float: left;
+    font-family: Tahoma;
+    height: 20px;
+    line-height: 18px;
+    font-size: 20px;
+    color: #F60;
+    font-weight: bold;
+}
+.price-box span i{
+    font-size: 12px;
+    font-family: arial;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.title-selling-point {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    line-height: 20px;
+    vertical-align: top;
+    font-size: 12px;
+    margin: 8px 0;
+    word-break: break-all;
+}
+
+.evaluate-old {
+    clear: both;
+    height: 12px;
+    line-height: 12px;
+    padding: 3px 0;
+    text-align: right;
+}
+
+.adv {
+    float: left;
+    position: relative;
+    display: inline-block;
+    color: #999;
+}
+.adv span {
+    color: #2272c8;
+}
+
+.store-stock {
+    height: 18px;
+    margin: 8px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

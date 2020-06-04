@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <link rel="shortcut icon" href="https://cn.vuejs.org/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <!-- 苏宁商城模块组件 -->
+        <suning-shop-component :options="options"></suning-shop-component>
+    </div>
+    <!-- 苏宁商城模块模板 -->
+    <template id="suningShopTemplate">
+        <div class="row">
+            <suning-filter-component :options="options"></suning-filter-component>
+            <suning-board-component></suning-board-component>
+        </div>
+    </template>
+    <!-- 苏宁商城筛选内容展示模板 -->
+    <template id="suningBoardTemplate">
+        <div class="my-main">
+            <ul>
+                <li v-for="(item,index) in list">
+                    <div class="product-box">
+                        <div class="res-img">
+                            <img :src="item.pic" alt="">
+                        </div>
+                        <div class="res-info">
+                            <div class="price-box">
+                                <span>
+                                    <i>￥</i>
+                                    {{ item.price }}
+                                </span>
+                            </div>
+                            <div class="title-selling-point">
+                                {{ item.name }}
+                            </div>
+                            <div class="evaluate-old">
+                                <div class="adv">
+                                    <span>{{ item.evaluate }}</span>评价
+                                </div>
+                            </div>
+                            <div class="store-stock">
+                                {{ item.shop }}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </template>
+    <!-- 苏宁商城筛选模板 -->
+    <template id="suningFilterTemplate">
+        <div class="header">
+            <suning-filter-option-component :options="options"></suning-filter-option-component>
+            <suning-filter-sort-component></suning-filter-sort-component>
+        </div>
+    </template>
+    <!-- 苏宁商城筛选模板【排序】 -->
+    <template id="suningFilterSortTemplate">
+        <div class="second-up">
+            <div class="sort">
+                <span class="icon-com">
+                    <em @click="sort('salesVolume')">
+                        销量
+                        <i class="icon icon1"></i>
+                    </em>
+
+                </span>
+                <span class="icon-com">
+                    <em @click="sort('evaluate')">
+                        评价数
+                        <i class="icon icon1 icon-pj"></i>
+                    </em>
+                </span>
+                <span>
+                    <em @click="sortPrice">
+                        价格
+                        <i class="icon icon2 icon-jg" :style="{backgroundPosition: logoStatus}"></i>
+                    </em>
+                </span>
+            </div>
+        </div>
+    </template>
+
+    <!-- 苏宁商城筛选模板【选项】 -->
+    <template id="suningFilterOptionTemplate">
+        <div class="option">
+            <div class="s-left">
+                <label>其他选项</label>
+            </div>
+            <div class="s-right">
+                <div class="other-opts" v-for="(item,index) in options" :key="item.id">
+                    <a href="###" class="o-text">
+                        <span class="o-text-span">{{ item.name }}</span>
+                        <i></i>
+                        <div class="o-details">
+                            <div class="d-container">
+                                <span href="###" v-for="(items,indexs) in item.child" :key="items.id" @click="optionUpdates(items, item.alias)">{{ items }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="other-opts">
+                    <a href="###" class="o-text">
+                        <span>内存容量</span>
+                        <i></i>
+                    </a>
+                    <div class="o-details">
+                        <div class="d-container">
+                            <a href="###">32GB</a>
+                            <a href="###">16GB</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </template>
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="../../node_modules/vuex/dist/vuex.js"></script>
+    <script src="../static/js/index.js"></script>
+</body>
+
+</html>
